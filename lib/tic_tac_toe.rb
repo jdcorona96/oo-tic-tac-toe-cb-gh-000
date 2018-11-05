@@ -73,6 +73,34 @@ class TicTacToe
   false
 end
 
+def full?
+  @board.all? do |element|
+    element == "X" || element == "O"
+  end
+end
+
+def draw?
+  if full? && !won?
+    return true
+  end
+  false
+end
+
+def over?
+
+  if won? || full?
+    return true
+  end
+  false
+end
+
+def winner
+  if won? then
+    return @board[won?[0]]
+  end
+  nil
+end
+
 
   def display_board
     puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
