@@ -24,6 +24,11 @@ class TicTacToe
     @board.count{|token| token == "X" || token == "O"}
   end
 
+  def input_to_index(user_input)
+  user_input.strip.to_i - 1
+  end
+
+
   def display_board
     puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
     puts "-----------"
