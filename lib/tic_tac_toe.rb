@@ -15,7 +15,15 @@ class TicTacToe
   def initialize(board = nil)
     @board = board || Array.new(9, " ")
   end
+  
+  def move(board, index, current_player)
+    board[index] = current_player
+  end
 
+  def position_taken?(board, location)
+  board[location] != " " && board[location] != ""
+  end
+  
   def current_player
     turn_count % 2 == 0 ? "X" : "O"
   end
