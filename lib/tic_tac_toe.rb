@@ -123,5 +123,5 @@ end
       end
     end
   end
-  
-end
+
+end #class TicTacToe
