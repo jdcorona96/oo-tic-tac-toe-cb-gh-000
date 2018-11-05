@@ -109,4 +109,19 @@ end
     puts "-----------"
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
+
+  def play(board)
+
+    loop do
+      turn
+      if won? then
+        puts "#{winner(board)} has won!"
+        break
+      elsif draw? then
+        puts "Draw"
+        break
+      end
+    end
+  end
+  
 end
